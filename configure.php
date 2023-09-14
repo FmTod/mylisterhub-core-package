@@ -120,7 +120,7 @@ $usernameGuess = dirname($usernameGuess);
 $usernameGuess = basename($usernameGuess);
 $authorUsername = ask('Author username', $usernameGuess);
 
-$vendorName = "FmTod";
+$vendorName = 'FmTod';
 $vendorSlug = slugify($vendorName);
 $vendorNamespace = str_replace('-', '', ucwords($vendorName));
 

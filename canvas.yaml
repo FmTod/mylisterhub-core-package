@@ -1,0 +1,27 @@
+preset: package
+
+namespace: VendorName\Skeleton
+user-auth-provider: App\User
+
+paths:
+  src: src
+  resource: resources
+
+factory:
+  path: database/factories
+
+migration:
+  path: database/migrations
+  prefix: ''
+
+console:
+  namespace: VendorName\Skeleton\Console
+
+model:
+  namespace: VendorName\Skeleton\Models
+
+provider:
+  namespace: VendorName\Skeleton
+
+testing:
+  namespace: VendorName\Skeleton\Tests

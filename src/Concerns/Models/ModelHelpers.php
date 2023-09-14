@@ -7,7 +7,7 @@ trait ModelHelpers
     /**
      * Call the given Closure with the current instance then return the current instance.
      */
-    public function tap(?callable $callback = null): static
+    public function tap(callable $callback = null): static
     {
         return tap($this, $callback);
     }
@@ -15,7 +15,6 @@ trait ModelHelpers
     /**
      * Apply the callback if the value is truthy.
      *
-     * @param  null  $default
      *
      * @noinspection PhpMixedReturnTypeCanBeReducedInspection
      */

@@ -7,7 +7,6 @@ trait MockableAndSwappable
     use Mockable {
         Mockable::make as mockMake;
     }
-
     use Swappable {
         Swappable::make as swapMake;
     }

@@ -21,9 +21,6 @@ trait HasQueryBuilder
         return $this->alwaysInclude ?? [];
     }
 
-    /**
-     * @return \MyListerHub\Core\QueryBuilder\QueryBuilder|\Illuminate\Database\Eloquent\Builder
-     */
     protected function query(): QueryBuilder|Builder
     {
         return QueryBuilder::for($this->getModel())

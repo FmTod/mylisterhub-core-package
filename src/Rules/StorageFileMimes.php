@@ -4,7 +4,6 @@ namespace MyListerHub\Core\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Support\Facades\Storage;
-use RahulHaque\Filepond\Facades\Filepond;
 use Symfony\Component\Mime\MimeTypes;
 
 class StorageFileMimes implements Rule
@@ -26,7 +25,6 @@ class StorageFileMimes implements Rule
      *
      * @param  string  $attribute
      * @param  mixed  $value
-     * @return bool
      */
     public function passes($attribute, $value): bool
     {
@@ -42,8 +40,6 @@ class StorageFileMimes implements Rule
 
     /**
      * Get the validation error message.
-     *
-     * @return string
      */
     public function message(): string
     {

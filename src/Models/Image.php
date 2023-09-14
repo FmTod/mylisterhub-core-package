@@ -110,7 +110,7 @@ class Image extends Model
                 $exist = false;
             }
 
-            if (!$exist) {
+            if (! $exist) {
                 return 0;
             }
 

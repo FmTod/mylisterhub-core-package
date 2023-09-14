@@ -7,7 +7,7 @@ use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Support\Arr;
 use InvalidArgumentException;
 
-class UniqueKey implements Rule, DataAwareRule
+class UniqueKey implements DataAwareRule, Rule
 {
     /**
      * All the data under validation.

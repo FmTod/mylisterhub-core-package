@@ -7,7 +7,7 @@ use Illuminate\Contracts\Validation\DataAwareRule;
 use Illuminate\Contracts\Validation\Rule;
 use InvalidArgumentException;
 
-class CompareMoney implements Rule, DataAwareRule
+class CompareMoney implements DataAwareRule, Rule
 {
     /**
      * All the data under validation.
@@ -23,12 +23,11 @@ class CompareMoney implements Rule, DataAwareRule
      * Create a new rule instance.
      *
      * @param  \FmTod\Money\Money|mixed  $expected
-     * @param  null  $callback
      */
     public function __construct(
         protected string $expected,
         protected string $operator = '=',
-        ?string $currency = null,
+        string $currency = null,
         protected $callback = null,
     ) {
         $this->currency = $currency ?? config('money.currency');

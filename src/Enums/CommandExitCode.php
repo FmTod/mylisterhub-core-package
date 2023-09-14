@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace MyListerHub\Core\Enums;
 
@@ -13,7 +15,10 @@ use BenSampo\Enum\Enum;
 final class CommandExitCode extends Enum
 {
     public const Success = 0;
+
     public const Failure = 1;
+
     public const Invalid = 2;
+
     public const Skipped = 3;
 }

@@ -2,7 +2,6 @@
 
 namespace MyListerHub\Core\Rules;
 
-use MyListerHub\Core\Rules\StorageFileExists;
 use Illuminate\Contracts\Validation\InvokableRule;
 use RahulHaque\Filepond\Facades\Filepond;
 
@@ -14,7 +13,6 @@ class FilepondValid implements InvokableRule
      * @param  string  $attribute
      * @param  mixed  $value
      * @param  \Closure(string): \Illuminate\Translation\PotentiallyTranslatedString  $fail
-     * @return void
      */
     public function __invoke($attribute, $value, $fail): void
     {

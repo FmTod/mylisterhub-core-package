@@ -2,8 +2,8 @@
 
 namespace MyListerHub\Core\Concerns\Controllers;
 
-use MyListerHub\Core\QueryBuilder\QueryBuilder;
 use Illuminate\Database\Eloquent\Builder;
+use MyListerHub\Core\QueryBuilder\QueryBuilder;
 
 trait HasQueryBuilder
 {

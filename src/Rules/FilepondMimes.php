@@ -2,7 +2,6 @@
 
 namespace MyListerHub\Core\Rules;
 
-use MyListerHub\Core\Rules\StorageFileMimes;
 use RahulHaque\Filepond\Facades\Filepond;
 
 class FilepondMimes extends StorageFileMimes
@@ -22,7 +21,6 @@ class FilepondMimes extends StorageFileMimes
      *
      * @param  string  $attribute
      * @param  mixed  $value
-     * @return bool
      */
     public function passes($attribute, $value): bool
     {

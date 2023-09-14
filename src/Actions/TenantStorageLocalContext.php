@@ -17,7 +17,7 @@ class TenantStorageLocalContext
      *
      * @throws \League\Flysystem\FilesystemException
      */
-    public function handle(string $path, callable $callback, ?string $visibility = null, FilesystemAdapter|string $disk = 'local'): mixed
+    public function handle(string $path, callable $callback, string $visibility = null, FilesystemAdapter|string $disk = 'local'): mixed
     {
         return StorageLocalContext::run(Storage::tenant($visibility), $path, $callback, $disk);
     }

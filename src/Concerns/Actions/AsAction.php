@@ -9,9 +9,9 @@ use Lorisleiva\Actions\Concerns\AsObject;
 
 trait AsAction
 {
-    use AsObject;
-    use AsJob;
     use AsFake;
+    use AsJob;
+    use AsObject;
 
     /**
      * @throws \Throwable

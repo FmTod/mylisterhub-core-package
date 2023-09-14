@@ -7,7 +7,6 @@ use Mockery\Expectation;
 use Mockery\ExpectationInterface;
 use Mockery\HigherOrderMessage;
 use Mockery\MockInterface;
-use MyListerHub\Core\Concerns\Mockable\Mockable;
 
 trait MockableMapper
 {

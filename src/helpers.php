@@ -1,7 +1,6 @@
 <?php
 
 use FmTod\Money\Money;
-use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Carbon;
 
 if (! function_exists('human_file_size')) {
@@ -77,6 +76,7 @@ if (! function_exists('clean_css_id')) {
         $string = preg_replace("/[^a-z0-9_\s-]/", '', $string);
         //Clean up multiple dashes or whitespaces
         $string = preg_replace("/[\s-]+/", ' ', $string);
+
         //Convert whitespaces and underscore to dash
         return preg_replace("/[\s_]/", '-', $string);
     }

@@ -78,7 +78,7 @@ class MacroServiceProvider extends ServiceProvider
              *
              * @return \MyListerHub\Core\Providers\MacroServiceProvider|\Illuminate\Database\Query\Builder|\Illuminate\Support\HigherOrderTapProxy|mixed
              */
-            function (array|string $column, ?string $value = null) {
+            function (array|string $column, string $value = null) {
                 /* @var Builder $this */
 
                 if (! is_array($column)) {
@@ -170,7 +170,7 @@ class MacroServiceProvider extends ServiceProvider
              *
              * @return \Illuminate\Database\Query\Builder
              */
-            function (?string $table = null, ?string $as = null) {
+            function (string $table = null, string $as = null) {
                 if (is_null($table)) {
                     $table = $this->from;
                 }

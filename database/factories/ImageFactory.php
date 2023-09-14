@@ -1,6 +1,5 @@
 <?php
 
-
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ImageFactory extends Factory

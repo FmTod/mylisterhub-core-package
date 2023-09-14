@@ -2,6 +2,7 @@
 
 namespace MyListerHub\Core\Http\API;
 
+use Illuminate\Routing\Controller;
 use MyListerHub\Core\Concerns\API\BuildsResponses;
 use MyListerHub\Core\Concerns\API\HandlesStandardOperations;
 use MyListerHub\Core\Concerns\API\HasAllowedAttributes;
@@ -11,7 +12,6 @@ use MyListerHub\Core\Concerns\API\HasQueryBuilder;
 use MyListerHub\Core\Concerns\API\HasRequest;
 use MyListerHub\Core\Concerns\API\HasResource;
 use MyListerHub\Core\Concerns\API\InitializesTraits;
-use Illuminate\Routing\Controller;
 use Spatie\QueryBuilder\AllowedSort;
 
 /**
@@ -19,17 +19,17 @@ use Spatie\QueryBuilder\AllowedSort;
  */
 abstract class ResourceController extends Controller
 {
-    use HasAvailableAttributes;
-    use HasAllowedAttributes;
-
-    /** @use HasQueryBuilder<T> */
-    use HasQueryBuilder;
-
-    use HasRequest;
-    use HasResource;
-    use HasMeta;
     use BuildsResponses;
     use HandlesStandardOperations;
+
+    use HasAllowedAttributes;
+
+    use HasAvailableAttributes;
+    use HasMeta;
+    /** @use HasQueryBuilder<T> */
+    use HasQueryBuilder;
+    use HasRequest;
+    use HasResource;
     use InitializesTraits;
 
     /**

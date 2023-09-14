@@ -20,7 +20,7 @@ class ModuleServiceProvider extends ServiceProvider
                 return;
             }
 
-            /** @var \Modules\AbstractModule $module */
+            /** @var \MyListerHub\Core\Modules\AbstractModule $module */
             $module = include $definition;
             $module->boot();
 
@@ -44,7 +44,7 @@ class ModuleServiceProvider extends ServiceProvider
                 return;
             }
 
-            /** @var \Modules\AbstractModule $module */
+            /** @var \MyListerHub\Core\Modules\AbstractModule $module */
             $module = include $definition;
             $module->register();
 

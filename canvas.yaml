@@ -1,6 +1,6 @@
 preset: package
 
-namespace: FmTod\Core
+namespace: MyListerHub\Core
 user-auth-provider: App\User
 
 paths:
@@ -15,13 +15,13 @@ migration:
   prefix: ''
 
 console:
-  namespace: FmTod\Core\Console
+  namespace: MyListerHub\Core\Console
 
 model:
-  namespace: FmTod\Core\Models
+  namespace: MyListerHub\Core\Models
 
 provider:
-  namespace: FmTod\Core
+  namespace: MyListerHub\Core\Providers
 
 testing:
-  namespace: FmTod\Core\Tests
+  namespace: MyListerHub\Core\Tests

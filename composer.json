@@ -42,7 +42,7 @@
         "fmtod/laravel-money": "^10.0",
         "fmtod/laravel-tabulator": "^1.0",
         "fmtod/laravel-tabulator-inertia": "^1.0",
-        "google/apiclient": "2.13",
+        "google/apiclient": "2.15.1",
         "illuminate/console": "^10.0",
         "illuminate/contracts": "^10.0",
         "illuminate/database": "^10.0",

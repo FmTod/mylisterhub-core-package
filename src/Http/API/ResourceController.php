@@ -21,13 +21,13 @@ abstract class ResourceController extends Controller
 {
     use BuildsResponses;
     use HandlesStandardOperations;
-
     use HasAllowedAttributes;
-
     use HasAvailableAttributes;
     use HasMeta;
+
     /** @use HasQueryBuilder<T> */
     use HasQueryBuilder;
+
     use HasRequest;
     use HasResource;
     use InitializesTraits;

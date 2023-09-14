@@ -1,6 +1,6 @@
 preset: package
 
-namespace: VendorName\Skeleton
+namespace: FmTod\Core
 user-auth-provider: App\User
 
 paths:
@@ -15,13 +15,13 @@ migration:
   prefix: ''
 
 console:
-  namespace: VendorName\Skeleton\Console
+  namespace: FmTod\Core\Console
 
 model:
-  namespace: VendorName\Skeleton\Models
+  namespace: FmTod\Core\Models
 
 provider:
-  namespace: VendorName\Skeleton
+  namespace: FmTod\Core
 
 testing:
-  namespace: VendorName\Skeleton\Tests
+  namespace: FmTod\Core\Tests

@@ -1,24 +1,60 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "mylisterhub/core",
+    "description": "This is my package core",
     "keywords": [
-        ":vendor_name",
+        "FmTod",
+        "MyListerHub",
         "laravel",
-        ":package_slug"
+        "core"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/fmtod/mylisterhub-core-package",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Victor R",
+            "email": "39545521+viicslen@users.noreply.github.com",
             "role": "Developer"
+        }
+    ],
+
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/FmTod/laravel-money-source"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/FmTod/laravel-tabulator"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/FmTod/laravel-tabulator-inertia"
         }
     ],
     "require": {
         "php": "^8.1",
+        "ext-bcmath": "*",
+        "ext-imagick": "*",
+        "altek/accountant": "^3.0",
+        "ashallendesign/laravel-exchange-rates": "^7.0",
+        "based/laravel-typescript": "^0.0.4",
+        "bensampo/laravel-enum": "^6.6",
+        "fmtod/laravel-money": "^10.0",
+        "fmtod/laravel-tabulator": "^1.0",
+        "fmtod/laravel-tabulator-inertia": "^1.0",
+        "illuminate/contracts": "^10.0",
+        "intervention/image": "^2.7",
+        "laravie/serialize-queries": "^2.2",
+        "lorisleiva/laravel-actions": "^2.5",
+        "macellan/laravel-zip": "^1.0",
+        "rahulhaque/laravel-filepond": "^1.11",
+        "spatie/laravel-data": "^3.8",
         "spatie/laravel-package-tools": "^1.14.0",
-        "illuminate/contracts": "^10.0"
+        "spatie/laravel-query-builder": "^5.5",
+        "spatie/pdf-to-image": "^2.2",
+        "spatie/simple-excel": "^3.2",
+        "spatie/typescript-transformer": "^2.2",
+        "stancl/tenancy": "^3.7"
     },
     "require-dev": {
         "laravel/pint": "^1.0",
@@ -35,14 +71,16 @@
         "spatie/laravel-ray": "^1.26"
     },
     "autoload": {
+        "files": [
+            "src/helpers.php"
+        ],
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "MyListerHub\\Core\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/"
+            "MyListerHub\\Core\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -62,11 +100,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
-            ],
-            "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
-            }
+                "MyListerHub\\Core\\CoreServiceProvider",
+                "MyListerHub\\Core\\Providers\\MacroServiceProvider",
+                "MyListerHub\\Core\\Providers\\ModuleServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev",

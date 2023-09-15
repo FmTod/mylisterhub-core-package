@@ -9,8 +9,9 @@ use Symfony\Component\HttpFoundation\Response;
 
 class ModuleRoutes
 {
-
-    public function __construct(public ?string $module = null) {}
+    public function __construct(public ?string $module = null)
+    {
+    }
 
     /**
      * Handle an incoming request.

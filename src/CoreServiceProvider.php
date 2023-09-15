@@ -7,6 +7,7 @@ use MyListerHub\Core\Console\Commands\DataObjectMake;
 use MyListerHub\Core\Console\Commands\HorizonPrune;
 use MyListerHub\Core\Console\Commands\LogClear;
 use MyListerHub\Core\Console\Commands\MigrateMake;
+use MyListerHub\Core\Http\Middleware\ModuleRoutes;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -28,5 +29,10 @@ class CoreServiceProvider extends PackageServiceProvider
                 LogClear::class,
                 MigrateMake::class,
             ]);
+    }
+
+    public function packageRegistered()
+    {
+        $this->app['router']->aliasMiddleware('module', ModuleRoutes::class);
     }
 }

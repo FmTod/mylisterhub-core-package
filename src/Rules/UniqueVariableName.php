@@ -17,8 +17,6 @@ class UniqueVariableName implements Rule
 
     /**
      * The column to check on.
-     *
-     * @var string
      */
     protected ?string $column;
 

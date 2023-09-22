@@ -2,7 +2,6 @@
 
 namespace MyListerHub\Core;
 
-use Illuminate\Database\Migrations\MigrationCreator;
 use MyListerHub\Core\Console\Commands\DatabaseOptimize;
 use MyListerHub\Core\Console\Commands\DataObjectMake;
 use MyListerHub\Core\Console\Commands\HorizonPrune;

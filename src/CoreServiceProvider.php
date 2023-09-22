@@ -2,6 +2,7 @@
 
 namespace MyListerHub\Core;
 
+use Illuminate\Database\Migrations\MigrationCreator;
 use MyListerHub\Core\Console\Commands\DatabaseOptimize;
 use MyListerHub\Core\Console\Commands\DataObjectMake;
 use MyListerHub\Core\Console\Commands\HorizonPrune;
@@ -27,12 +28,16 @@ class CoreServiceProvider extends PackageServiceProvider
                 DataObjectMake::class,
                 HorizonPrune::class,
                 LogClear::class,
-                MigrateMake::class,
             ]);
     }
 
-    public function packageRegistered()
+    public function packageRegistered(): void
     {
         $this->app['router']->aliasMiddleware('module', ModuleRoutes::class);
+
+        // Load migrate command after the framework has been bootstrapped
+        $this->app->afterResolving('migration.creator', fn () => $this->commands([
+            MigrateMake::class,
+        ]));
     }
 }

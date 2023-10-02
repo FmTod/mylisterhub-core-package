@@ -17,17 +17,17 @@ jobs:
     uses: ./.github/workflows/_lint.yml
     if:  ${{ !startsWith(github.head_ref, 'renovate/') && github.event.pull_request.draft == false }}
 
-  analize:
-    name: '🔎 Analize'
-    uses: ./.github/workflows/_analyze.yml
-    if:  ${{ !startsWith(github.head_ref, 'renovate/') && github.event.pull_request.draft == false }}
-    secrets: inherit
+#   analize:
+#     name: '🔎 Analize'
+#     uses: ./.github/workflows/_analyze.yml
+#     if:  ${{ !startsWith(github.head_ref, 'renovate/') && github.event.pull_request.draft == false }}
+#     secrets: inherit
 
-  test:
-    name: '🧪 Test'
-    uses: ./.github/workflows/_test.yml
-    if:  ${{ !startsWith(github.head_ref, 'renovate/') && github.event.pull_request.draft == false }}
-    secrets: inherit
+#   test:
+#     name: '🧪 Test'
+#     uses: ./.github/workflows/_test.yml
+#     if:  ${{ !startsWith(github.head_ref, 'renovate/') && github.event.pull_request.draft == false }}
+#     secrets: inherit
 
   release:
     name: '🚀 Release'

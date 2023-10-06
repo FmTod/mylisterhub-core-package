@@ -78,7 +78,8 @@
             "src/helpers.php"
         ],
         "psr-4": {
-            "MyListerHub\\Core\\": "src/"
+            "MyListerHub\\Core\\": "src/",
+            "MyListerHub\\Core\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {

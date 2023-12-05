@@ -51,7 +51,7 @@
         "laravie/serialize-queries": "^2.2",
         "lorisleiva/laravel-actions": "^2.5",
         "macellan/laravel-zip": "^1.0",
-        "rahulhaque/laravel-filepond": "^1.11",
+        "rahulhaque/laravel-filepond": "^10.0",
         "spatie/laravel-data": "^3.8",
         "spatie/laravel-package-tools": "^1.14.0",
         "spatie/laravel-query-builder": "^5.3",

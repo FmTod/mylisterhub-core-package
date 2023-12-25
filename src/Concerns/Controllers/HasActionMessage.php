@@ -7,7 +7,7 @@ use Illuminate\Support\Str;
 
 trait HasActionMessage
 {
-    public function actionMessage(Builder $query, string $action, bool $queued = false, bool $lockable = false, string $subject = null): string
+    public function actionMessage(Builder $query, string $action, bool $queued = false, bool $lockable = false, ?string $subject = null): string
     {
         $count = $query->clone()->when($lockable, fn (Builder $query) => $query->where('is_locked', false))->count();
         $lockedCount = $lockable ? $query->clone()->where('is_locked', true)->count() : 0;

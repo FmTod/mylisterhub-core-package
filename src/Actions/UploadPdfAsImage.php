@@ -21,7 +21,7 @@ class UploadPdfAsImage
      *
      * @throws \Spatie\PdfToImage\Exceptions\PdfDoesNotExist|\Spatie\PdfToImage\Exceptions\PageDoesNotExist
      */
-    public function handle(UploadedFile|File $file, int $page = null): DataCollection
+    public function handle(UploadedFile|File $file, ?int $page = null): DataCollection
     {
         $imagesPath = config('tenancy.filesystem.images.public', 'images');
         $filename = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);

@@ -21,7 +21,7 @@ class Selective extends Database
     public function record(
         Recordable $model,
         string $event,
-        string $pivotRelation = null,
+        ?string $pivotRelation = null,
         array $pivotProperties = []
     ): Ledger {
         $notary = Config::get('accountant.notary');

@@ -19,7 +19,7 @@ class SmartRatesExchanger implements Exchange
      *
      * @return void
      */
-    public function __construct(Carbon|string $date = null)
+    public function __construct(Carbon|string|null $date = null)
     {
         $this->date = $date ? Carbon::parse($date) : null;
     }

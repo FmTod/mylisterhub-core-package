@@ -78,7 +78,7 @@ class MacroServiceProvider extends ServiceProvider
              *
              * @return \MyListerHub\Core\Providers\MacroServiceProvider|\Illuminate\Database\Query\Builder|\Illuminate\Support\HigherOrderTapProxy|mixed
              */
-            function (array|string $column, string $value = null) {
+            function (array|string $column, ?string $value = null) {
                 /* @var Builder $this */
 
                 if (! is_array($column)) {
@@ -170,7 +170,7 @@ class MacroServiceProvider extends ServiceProvider
              *
              * @return \Illuminate\Database\Query\Builder
              */
-            function (string $table = null, string $as = null) {
+            function (?string $table = null, ?string $as = null) {
                 if (is_null($table)) {
                     $table = $this->from;
                 }
@@ -391,7 +391,7 @@ class MacroServiceProvider extends ServiceProvider
              *
              * @throws \InvalidArgumentException
              */
-            function (string $childRelation = 'children', int $perPage = null, array $columns = ['*'], string $pageName = 'page', int $page = null) {
+            function (string $childRelation = 'children', ?int $perPage = null, array $columns = ['*'], string $pageName = 'page', ?int $page = null) {
                 $page = $page ?: Paginator::resolveCurrentPage($pageName);
 
                 $perPage = $perPage ?: $this->model->getPerPage();
@@ -561,7 +561,7 @@ class MacroServiceProvider extends ServiceProvider
              *
              * @return \Illuminate\Http\JsonResponse
              */
-            function (mixed $data, string $message = null, string $status = 'success', int $code = 200) {
+            function (mixed $data, ?string $message = null, string $status = 'success', int $code = 200) {
                 return response()->json(array_filter([
                     'status' => $status,
                     'message' => $message,
@@ -1000,7 +1000,7 @@ class MacroServiceProvider extends ServiceProvider
     {
         Money::macro(
             name: 'convertToCurrency',
-            macro: function (Currency|string $currency, Carbon $date = null): Money|\Money\Money {
+            macro: function (Currency|string $currency, ?Carbon $date = null): Money|\Money\Money {
                 if (is_string($currency)) {
                     $currency = new Currency($currency);
                 }

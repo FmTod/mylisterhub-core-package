@@ -27,7 +27,7 @@ class CompareMoney implements DataAwareRule, Rule
     public function __construct(
         protected string $expected,
         protected string $operator = '=',
-        string $currency = null,
+        ?string $currency = null,
         protected $callback = null,
     ) {
         $this->currency = $currency ?? config('money.currency');

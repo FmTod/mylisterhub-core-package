@@ -6,7 +6,7 @@ use Carbon\Carbon;
 
 trait HandlesDateCommand
 {
-    public function getDate($date, string $message = null): Carbon
+    public function getDate($date, ?string $message = null): Carbon
     {
         if (! $message) {
             $message = 'Please enter a date';
@@ -19,12 +19,12 @@ trait HandlesDateCommand
         return Carbon::parse($date);
     }
 
-    public function getDateArgument(string $argument = 'date', string $message = null): Carbon
+    public function getDateArgument(string $argument = 'date', ?string $message = null): Carbon
     {
         return $this->getDate($this->argument($argument), $message);
     }
 
-    public function getDateOption(string $option = 'date', string $message = null): Carbon
+    public function getDateOption(string $option = 'date', ?string $message = null): Carbon
     {
         return $this->getDate($this->option($option), $message);
     }

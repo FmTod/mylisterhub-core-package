@@ -33,7 +33,7 @@ class UniqueVariableName implements Rule
     /**
      * Create a new rule instance.
      */
-    public function __construct(string $table, mixed $ignore = null, string $column = null, string $idColumn = null)
+    public function __construct(string $table, mixed $ignore = null, ?string $column = null, ?string $idColumn = null)
     {
         $this->column = $column;
 
@@ -73,7 +73,7 @@ class UniqueVariableName implements Rule
      *
      * @return $this
      */
-    public function ignore(mixed $id, string $idColumn = null): static
+    public function ignore(mixed $id, ?string $idColumn = null): static
     {
         if ($id instanceof Model) {
             return $this->ignoreModel($id, $idColumn);
@@ -90,7 +90,7 @@ class UniqueVariableName implements Rule
      *
      * @return $this
      */
-    public function ignoreModel(Model $model, string $idColumn = null): static
+    public function ignoreModel(Model $model, ?string $idColumn = null): static
     {
         $this->idColumn = $idColumn ?? $model->getKeyName();
         $this->ignore = $model->{$this->idColumn};

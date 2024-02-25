@@ -8,9 +8,9 @@ if (! function_exists('human_file_size')) {
      * Returns a human-readable file size.
      *
      * @param  int  $bytes
-     * Byte contains the size of the bytes to convert
+     *                      Byte contains the size of the bytes to convert
      * @param  int  $decimals
-     * Number of decimal places to be returned
+     *                         Number of decimal places to be returned
      * @return string a string in human-readable format
      *
      * */
@@ -28,13 +28,13 @@ if (! function_exists('in_arrayi')) {
      * Checks if a value exists in an array in a case-insensitive manner.
      *
      * @param  mixed  $needle
-     * The searched value
-     * @param $haystack
-     * The array
-     * @param  bool  $strict [optional]
-     * If set to true type of needle will also be matched
+     *                         The searched value
+     * @param  $haystack
+     *                   The array
+     * @param  bool  $strict  [optional]
+     *                        If set to true type of needle will also be matched
      * @return bool true if needle is found in the array,
-     * false otherwise
+     *              false otherwise
      */
     function in_arrayi($needle, $haystack, bool $strict = false): bool
     {
@@ -46,10 +46,10 @@ if (! function_exists('uniord')) {
     /**
      * Checks if a value exists in an array in a case-insensitive manner.
      *
-     * @param $string
-     * Character to be converted to unicode
+     * @param  $string
+     *                 Character to be converted to unicode
      * @param  string  $encoding
-     * Encoding to use
+     *                            Encoding to use
      * @return string Encoded character
      */
     function uniord($string, string $encoding = 'UTF-8'): string
@@ -64,8 +64,8 @@ if (! function_exists('clean_css_id')) {
     /**
      * Checks if a value exists in an array in a case-insensitive manner.
      *
-     * @param $string
-     * string to be cleaned
+     * @param  $string
+     *                 string to be cleaned
      * @return string Cleaned CSS ID
      */
     function clean_css_id($string): string
@@ -86,8 +86,8 @@ if (! function_exists('array_contains')) {
     /**
      * Checks if a value exists in an array in a case-insensitive manner.
      *
-     * @param  string  $needle String to find in array
-     * @param  bool  $starts_with Specify if the string can be found anywhere on the array key or just on the start
+     * @param  string  $needle  String to find in array
+     * @param  bool  $starts_with  Specify if the string can be found anywhere on the array key or just on the start
      * @return bool Return true if any of the array keys contains the specified string, otherwise return false
      */
     function array_contains(string $needle, array $haystack, bool $starts_with = false): bool

@@ -362,8 +362,6 @@ class MacroServiceProvider extends ServiceProvider
             'resetEagerLoads',
             /**
              * Reset eager loads in the builder instance.
-             *
-             * @return \Illuminate\Database\Eloquent\Builder
              */
             fn (): Eloquent => $this->setEagerLoads([])
         );
@@ -625,8 +623,6 @@ class MacroServiceProvider extends ServiceProvider
             'asCollection',
             /**
              * Get collection of an enum instances.
-             *
-             * @return Collection
              */
             fn (): Collection => collect(self::getInstances())
         );
@@ -635,9 +631,6 @@ class MacroServiceProvider extends ServiceProvider
             'map',
             /**
              * Get map enum instances to array.
-             *
-             * @param  callable  $callback
-             * @return array
              */
             fn (callable $callback): array => self::asCollection()->map($callback)->values()->toArray()
         );
@@ -837,8 +830,8 @@ class MacroServiceProvider extends ServiceProvider
              * Check if array is associative.
              *
              * @param  bool  $strict
-             * <p>If <i>false</i> then this function will match any array that doesn't contain integer keys.</p>
-             * <p>If <i>true</i> then this function match only arrays with sequence of integers starting from zero (range from 0 to elements_number - 1) as keys.</p>
+             *                        <p>If <i>false</i> then this function will match any array that doesn't contain integer keys.</p>
+             *                        <p>If <i>true</i> then this function match only arrays with sequence of integers starting from zero (range from 0 to elements_number - 1) as keys.</p>
              */
             function (array $array, bool $strict = false): bool {
                 if (empty($array)) {

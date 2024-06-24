@@ -17,8 +17,7 @@ class Any implements ValidationRule
      */
     public function __construct(
         protected array $rules
-    ) {
-    }
+    ) {}
 
     /**
      * Run the validation rule.

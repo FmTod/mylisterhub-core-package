@@ -16,8 +16,7 @@ class FloatNumber implements Rule
          * Number of fractional values allowed.
          */
         public int $fractionalCount = 2
-    ) {
-    }
+    ) {}
 
     /**
      * Determine if the validation rule passes.

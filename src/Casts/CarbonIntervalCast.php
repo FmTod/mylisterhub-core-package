@@ -14,8 +14,7 @@ class CarbonIntervalCast implements CastsAttributes
         protected ?string $unitColumn = null,
         protected bool $updateUnitColumn = true,
         protected ?string $defaultUnit = IntervalUnit::Minutes,
-    ) {
-    }
+    ) {}
 
     /**
      * Cast the given value.

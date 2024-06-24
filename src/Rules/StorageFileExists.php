@@ -14,8 +14,7 @@ class StorageFileExists implements Rule
      */
     public function __construct(
         public string $disk
-    ) {
-    }
+    ) {}
 
     /**
      * Determine if the validation rule passes.

@@ -13,8 +13,7 @@ class BenSampoEnumCast implements Cast
 {
     public function __construct(
         protected ?string $type = null
-    ) {
-    }
+    ) {}
 
     public function cast(DataProperty $property, mixed $value, array $context): Enum|Uncastable
     {

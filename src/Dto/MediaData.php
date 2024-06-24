@@ -13,6 +13,5 @@ class MediaData extends Data
         public string $url,
         public string $ext,
         public string $type,
-    ) {
-    }
+    ) {}
 }

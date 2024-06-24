@@ -18,8 +18,7 @@ class DuplicateData extends Data
     public function __construct(
         public Model $original,
         public Collection $duplicates,
-    ) {
-    }
+    ) {}
 
     public function toArray(): array
     {

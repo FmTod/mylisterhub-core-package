@@ -9,8 +9,7 @@ class CommandFrequency extends Data
     public function __construct(
         public string $method,
         public array $arguments = [],
-    ) {
-    }
+    ) {}
 
     public static function fromString(string $string): self
     {

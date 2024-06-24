@@ -13,8 +13,7 @@ class IncrementsByRanges implements Rule
      */
     public function __construct(
         public array $ranges,
-    ) {
-    }
+    ) {}
 
     /**
      * Determine if the validation rule passes.

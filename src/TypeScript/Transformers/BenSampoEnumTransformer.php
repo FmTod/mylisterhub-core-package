@@ -12,8 +12,7 @@ class BenSampoEnumTransformer implements Transformer
 {
     public function __construct(
         protected readonly TypeScriptTransformerConfig $config
-    ) {
-    }
+    ) {}
 
     public function transform(ReflectionClass $class, string $name): ?TransformedType
     {

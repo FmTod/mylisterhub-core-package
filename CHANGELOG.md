@@ -2,6 +2,10 @@
 
 All notable changes to `core` will be documented in this file.
 
+## v1.1.3 - 2024-06-24
+
+**Full Changelog**: https://github.com/FmTod/mylisterhub-core-package/compare/v1.1.2...v1.1.3
+
 ## v1.1.1 - 2023-12-05
 
 **Full Changelog**: https://github.com/FmTod/mylisterhub-core-package/compare/v1.1.0...v1.1.1

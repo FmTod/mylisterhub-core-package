@@ -52,7 +52,7 @@
         "lorisleiva/laravel-actions": "^2.5",
         "macellan/laravel-zip": "^1.0",
         "rahulhaque/laravel-filepond": "^10.0",
-        "spatie/laravel-data": "^3.8",
+        "spatie/laravel-data": "^4.0",
         "spatie/laravel-package-tools": "^1.14.0",
         "spatie/laravel-query-builder": "^5.3",
         "spatie/pdf-to-image": "^2.2",

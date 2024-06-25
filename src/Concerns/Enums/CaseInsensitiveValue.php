@@ -2,8 +2,6 @@
 
 namespace MyListerHub\Core\Concerns\Enums;
 
-use Illuminate\Support\Str;
-
 trait CaseInsensitiveValue
 {
     public static function fromValue(mixed $enumValue): static

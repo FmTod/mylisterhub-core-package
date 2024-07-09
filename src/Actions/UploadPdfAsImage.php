@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\Storage;
 use Imagick;
 use MyListerHub\Core\Concerns\Actions\AsAction;
 use MyListerHub\Core\Dto\MediaData;
-use MyListerHub\Core\Models\Image;
 use MyListerHub\Core\PdfToImage\PDF;
+use MyListerHub\Media\Models\Image;
 use Spatie\LaravelData\DataCollection;
 
 class UploadPdfAsImage

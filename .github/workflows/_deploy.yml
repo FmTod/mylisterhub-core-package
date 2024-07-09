@@ -1,0 +1,25 @@
+name: '📦 Deploy'
+
+on:
+  - workflow_call
+  - workflow_dispatch
+
+permissions: write-all
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Workflow in Another Repository
+        run: |
+          repo_owner="FmTod"
+          repo_name="satis"
+          event_type="new_version"
+
+          curl -L \
+            -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/repos/$repo_owner/$repo_name/dispatches \
+            -d "{\"event_type\": \"$event_type\"}"

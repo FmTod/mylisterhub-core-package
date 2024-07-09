@@ -34,3 +34,10 @@ jobs:
     needs: [lint]
     uses: ./.github/workflows/_release.yml
     if:  ${{ !startsWith(github.head_ref, 'renovate/') && github.event.pull_request.draft == false }}
+
+  deploy:
+    name: '📦 Deploy'
+    needs: [release]
+    uses: ./.github/workflows/_deploy.yml
+    if:  ${{ !startsWith(github.head_ref, 'renovate/') && github.event.pull_request.draft == false }}
+    secrets: inherit

@@ -48,7 +48,7 @@
         "illuminate/database": "^10.0",
         "illuminate/filesystem": "^10.0",
         "intervention/image": "^2.7",
-        "laravie/serialize-queries": "^2.2",
+        "laravie/serialize-queries": "^3.0",
         "lorisleiva/laravel-actions": "^2.5",
         "macellan/laravel-zip": "^1.0",
         "rahulhaque/laravel-filepond": "^10.0",
